@@ -13,12 +13,9 @@
         <div class="col-sm-2">
            
             @Html.Label("lbldepartamento","Departamento")
-            @Html.DropDownList("ddlcovid","Seleccione un departamento...")
+            @Html.DropDownList("ddlcovid",ViewData["listadodepartamentos"] as SelectList,"Seleccione un departamento...", new {@class="form-control"})
         </div>
-        <div class="col-sm-4">
-            @Html.Label("lblgenero","Genero")
-            @Html.DropDownList("ddlgenero")
-        </div>
+        
 
     </div>
 </form>
