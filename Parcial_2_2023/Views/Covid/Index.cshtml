@@ -10,7 +10,14 @@
 <form>
     <div class="form-group row mb-4">
         <div class="col-sm-2">
-            
+           
+            @Html.Label("lbldepartamento","Departamento")
+            @Html.DropDownList("ddlcovid","Seleccione un departamento...")
         </div>
+        <div class="col-sm-4">
+            @Html.Label("lblgenero","Genero")
+            @Html.DropDownList("ddlgenero","Seleccione un genero...")
+        </div>
+
     </div>
 </form>
