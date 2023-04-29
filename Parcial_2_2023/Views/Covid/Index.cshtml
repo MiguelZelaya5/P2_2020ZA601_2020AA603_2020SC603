@@ -1,7 +1,8 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    
 *@
 @{
+    ViewData["Title"] = "Home Page";
 }
 <h1>Registro de Covid</h1>
 <p>El siguiente formulario es para llevar el registro de casos reportados de Covid  por departamento y genero.</p>
@@ -12,12 +13,9 @@
         <div class="col-sm-2">
            
             @Html.Label("lbldepartamento","Departamento")
-            @Html.DropDownList("ddlcovid","Seleccione un departamento...")
+            @Html.DropDownList("ddlcovid",ViewData["listadodepartamentos"] as SelectList,"Seleccione un departamento...", new {@class="form-control"})
         </div>
-        <div class="col-sm-4">
-            @Html.Label("lblgenero","Genero")
-            @Html.DropDownList("ddlgenero","Seleccione un genero...")
-        </div>
+        
 
     </div>
 </form>
